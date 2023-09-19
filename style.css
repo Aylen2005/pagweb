@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    background-color: #6a7df7;
+}
+
+.modal-content {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+}
+.modal-dialog {
+    position: absolute;
+    width: 300px;
+    left: 83%;
+    margin-top: 100px;
+}
+
+p {
+    margin-top: 90px;
+}
+
+.image-container {
+    position: absolute;
+}
+
+.image-container img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#center-rectangle {
+    width: 600px;
+    height: 200px;
+    background-color: #2b2eda;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+}
+
+.yellow-button {
+    cursor: pointer;
+    background-color: #2a9ffe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.h2 {
+    position: absolute;
+    top: 35px;
+    left: 43%;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    background-color: #596fff;
+    color: white;
+    transition: left 0.3s ease;
+    padding-top: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.logo-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: auto;
+}
+
+.logo-button img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.sequence-container {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+#down-rectangle {
+    width: 600px;
+    height: 200px;
+    background-color: #2b2eda;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+}
+
+.blue-button {
+    cursor: pointer;
+    background-color: #2a9ffe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sequenceDown-container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}

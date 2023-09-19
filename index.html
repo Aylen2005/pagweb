@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+        <title>Bioproa</title>
+    </head>
+    <body>
+        <div class="sidebar" id="sidebar">
+            <p>Integrantes:</p>
+            <p>Cami Gonzalez</p>
+            <p>Axel Ramirez</p>
+        </div>
+        <div
+            class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5"
+            tabindex="-1"
+            role="dialog"
+            id="modalSheet"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="modal-header border-bottom-0">
+                        <h1 class="modal-title fs-5">DESCUBRE MAS!!</h1>
+                    </div>
+                    <div class="modal-body py-0">
+                        <p>
+                            El ADN se comunica con las proteinas a traves de un
+                            intermediario,que se llama ARNm a traves de un
+                            proceso que se denomina transcripcion.Digamos que el
+                            ARN es como una fotocopia de algunas paginas de la
+                            biblioteca que se le entrega a los trabajadores
+                            celulares para que sigan las instrucciones de los
+                            jefes nucleicos.Para que las ordenes nucleicas se
+                            transfieran a las proteinas,existen escritores,el
+                            ARNr(ribosomico) y el ARNt(transferencia)que es un
+                            proceso llamado traduccion forman a los
+                            polipeptidos.
+                        </p>
+                    </div>
+                    <div
+                        class="modal-footer flex-column align-items-stretch w-100 gap-2 pb-3 border-top-0"
+                    ></div>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <button id="sidebarToggle" class="logo-button">
+                <img src="bioproa.jpg" alt="Imagen" />
+            </button>
+        </div>
+
+        <div id="center-rectangle">
+            <button class="yellow-button">Generar</button>
+        </div>
+
+        <div id="down-rectangle">
+            <button class="blue-button">transcripcion</button>
+        </div>
+        <div class="sequence-container"></div>
+        <div class="sequenceDown-container"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
