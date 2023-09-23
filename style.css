@@ -31,7 +31,7 @@ p {
     border-radius: 50%;
 }
 
-#center-rectangle {
+#center-rectangulo {
     width: 600px;
     height: 200px;
     background-color: #2b2eda;
@@ -105,7 +105,7 @@ p {
     text-align: center;
     width: 100%;
 }
-#down-rectangle {
+#down-rectangulo {
     width: 600px;
     height: 200px;
     background-color: #2b2eda;
@@ -136,4 +136,25 @@ p {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+}
+.sequenceBajo-container {
+    position: absolute;
+    top: 560px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+.negro-button {
+    cursor: pointer;
+    background-color: #2a9ffe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
 }
