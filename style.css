@@ -150,14 +150,6 @@ p {
     left: 50%;
     transform: translateX(-50%);
 }
-.sequenceBajo-container {
-    position: absolute;
-    top: 650px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-}
 #bajo-rectangulo {
     width: 600px;
     height: 200px;
@@ -167,4 +159,13 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 30px;
+}
+
+.sequenceBajo-container {
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 }

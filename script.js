@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             'A': 'T',
             'T': 'A',
         };
-        return cadena.replace(/[GCAU]/g, match => reemplazos[match]);
+        return cadena.replace(/[GCAT]/g, match => reemplazos[match]);
     }
 
     function generarTranscripcion(cadena) {
@@ -65,31 +65,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function dividirEnTres(cadena) {
-        const tres = [];
+        const codones = [];
         for (let i = 0; i < cadena.length; i += 3) {
-            const trio = cadena.slice(i, i + 3);
-            tres.push(tres);
+            const codon = cadena.slice(i, i + 3); 
+            codones.push(codon); 
         }
-        return tres;
+        return codones;
     }
 
     function asignarAminoacidos(codones) {
         const aminoacidos = {
-            'ACG': 'Met',
+            'ATG': 'Met',
             'UGC': 'Ilet',
 			'AUC': 'ALTO',
-			'CCG': 'DESCONOCIDO',
 			'UUU': 'Phe',
 			'UUC':'Phe',
 			'UUA': 'Leu',
 			'UUG': 'Leu',
-            'TAC' : 'DESCONOCIDO',
-            'TTA' : 'DESCONOCIDO',
-            'TAA' : 'DESCONOCIDO',
-            'GTC' : 'DESCONOCIDO',
-            'CTA' : 'DESCONOCIDO',
-            'CGC'  : 'DESCONOCIDO',
-            'TTT' : 'DESCONOCIDO',
         };
 
         const aminoacidosSecuencia = codones.map(codon => aminoacidos[codon] || 'Desconocido');
