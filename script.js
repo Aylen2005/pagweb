@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			'UUU': 'Phe',
 			'UUC':'Phe',
 			'UUA': 'Leu',
-			'UUG': 'Leu',
         };
 
         const aminoacidosSecuencia = codones.map(codon => aminoacidos[codon] || 'Desconocido');
