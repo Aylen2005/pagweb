@@ -1,32 +1,44 @@
 document.getElementById("sidebarToggle").addEventListener("click", function () {
     document.getElementById("sidebar").classList.toggle("active");
 });
-
 document.addEventListener("DOMContentLoaded", function () {
     const yellowButton = document.querySelector(".yellow-button");
-    const blueButton = document.querySelector(".blue-button"); 
+    const blueButton = document.querySelector(".blue-button");
+    const negroButton = document.querySelector(".negro-button");
     const sequenceContainer = document.querySelector(".sequence-container");
-	const sequenceDownContainer = document.querySelector(".sequenceDown-container");
-    let bases = "CGTA"; 
-    let generarSecuencia = ""; 
+    const sequenceDownContainer = document.querySelector(".sequenceDown-container");
+    const bajoContainer = document.querySelector(".sequenceBajo-container");
+
+    let bases = "CGTA";
+    let generarSecuencia = "";
 
     yellowButton.addEventListener("click", function () {
         sequenceContainer.innerHTML = "";
-        generarSequencia = generarSequencia(bases); 
+        generarSecuencia = generarSequencia(bases);
 
         const p = document.createElement("p");
-        p.textContent = generarSequencia;
+        p.textContent = generarSecuencia;
         sequenceContainer.appendChild(p);
     });
 
-	blueButton.addEventListener("click", function () {
-		const sequenciaModificada = reemplazarLetras(generarSequencia);
+    blueButton.addEventListener("click", function () {
+        const sequenceModificada = reemplazarLetras(generarSecuencia);
 
-		sequenceDownContainer.innerHTML = "";
-		const p = document.createElement("p");
-		p.textContent = sequenciaModificada;
-		sequenceDownContainer.appendChild(p);
-	});
+        sequenceDownContainer.innerHTML = "";
+        const p = document.createElement("p");
+        p.textContent = sequenceModificada;
+        sequenceDownContainer.appendChild(p);
+    });
+
+    negroButton.addEventListener("click", function () {
+        const transcripcionSecuencia = generarTranscripcion(generarSecuencia);
+
+        const codones = dividirEnTres(transcripcionSecuencia);
+
+        const aminoacidosSecuencia = asignarAminoacidos(codones);
+
+        bajoContainer.innerHTML = aminoacidosSecuencia.join(" ");
+    });
 
     function generarSequencia(letras) {
         let sequencia = "";
@@ -45,7 +57,43 @@ document.addEventListener("DOMContentLoaded", function () {
             'A': 'T',
             'T': 'A',
         };
-
         return cadena.replace(/[GCAU]/g, match => reemplazos[match]);
     }
-});
+
+    function generarTranscripcion(cadena) {
+        return reemplazarLetras(cadena);
+    }
+
+    function dividirEnTres(cadena) {
+        const tres = [];
+        for (let i = 0; i < cadena.length; i += 3) {
+            const trio = cadena.slice(i, i + 3);
+            tres.push(tres);
+        }
+        return tres;
+    }
+
+    function asignarAminoacidos(codones) {
+        const aminoacidos = {
+            'ACG': 'Met',
+            'UGC': 'Ilet',
+			'AUC': 'ALTO',
+			'CCG': 'DESCONOCIDO',
+			'UUU': 'Phe',
+			'UUC':'Phe',
+			'UUA': 'Leu',
+			'UUG': 'Leu',
+            'TAC' : 'DESCONOCIDO',
+            'TTA' : 'DESCONOCIDO',
+            'TAA' : 'DESCONOCIDO',
+            'GTC' : 'DESCONOCIDO',
+            'CTA' : 'DESCONOCIDO',
+            'CGC'  : 'DESCONOCIDO',
+            'TTT' : 'DESCONOCIDO',
+        };
+
+        const aminoacidosSecuencia = codones.map(codon => aminoacidos[codon] || 'Desconocido');
+
+        return aminoacidosSecuencia;
+    }
+})

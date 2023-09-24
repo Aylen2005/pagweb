@@ -137,14 +137,6 @@ p {
     text-align: center;
     width: 100%;
 }
-.sequenceBajo-container {
-    position: absolute;
-    top: 65px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-}
 .negro-button {
     cursor: pointer;
     background-color: #2a9ffe;
@@ -158,7 +150,14 @@ p {
     left: 50%;
     transform: translateX(-50%);
 }
-
+.sequenceBajo-container {
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
 #bajo-rectangulo {
     width: 600px;
     height: 200px;
