@@ -51,7 +51,7 @@ p {
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    top: -45px;
+    top: -10%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -125,8 +125,8 @@ p {
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    top: -24%;
-    left: 50%;
+    top: -10%;
+    left: 30%;
     transform: translateX(-50%);
 }
 .sequenceDown-container {
@@ -146,24 +146,13 @@ p {
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    top: -24%;
-    left: 50%;
+    top: 322px;
+    left: 60%;
     transform: translateX(-50%);
 }
-#bajo-rectangulo {
-    width: 600px;
-    height: 200px;
-    background-color: #2b2eda;
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 30px;
-}
-
 .sequenceBajo-container {
     position: absolute;
-    top: 650px;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
