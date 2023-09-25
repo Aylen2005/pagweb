@@ -51,7 +51,7 @@ p {
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    top: -10%;
+    top: -17%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -125,13 +125,13 @@ p {
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    top: -10%;
+    top: -17%;
     left: 30%;
     transform: translateX(-50%);
 }
 .sequenceDown-container {
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -146,8 +146,8 @@ p {
     border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    top: 322px;
-    left: 60%;
+    top: 61%;
+    left: 57%;
     transform: translateX(-50%);
 }
 .sequenceBajo-container {
